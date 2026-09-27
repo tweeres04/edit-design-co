@@ -6,7 +6,9 @@ import { Menu } from '../_components/menu'
 import { InquiryForm } from './inquiry-form'
 
 export const metadata: Metadata = {
-	title: 'Inquire | Edit Design Co',
+	title: 'Inquire',
+	description:
+		'Tell Melissa about your renovation or new build in Greater Victoria.',
 }
 
 export default function InquirePage() {
