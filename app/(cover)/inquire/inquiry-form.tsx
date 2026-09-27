@@ -3,6 +3,7 @@
 import { useActionState } from 'react'
 import { sendInquiry, type InquiryState } from './actions'
 import { AddressInput } from './address-input'
+import { site } from '@/lib/site'
 
 const HEARD_FROM = ['Instagram', 'Pinterest', 'Referral', 'Other']
 
@@ -32,7 +33,8 @@ export function InquiryForm() {
 	}
 
 	const errors = state.status === 'invalid' ? state.errors : {}
-	const values = state.status === 'invalid' ? state.values : undefined
+	// Keep what they typed if validation or sending failed
+	const values = 'values' in state ? state.values : undefined
 
 	function field(
 		name: string,
@@ -196,6 +198,16 @@ export function InquiryForm() {
 			{state.status === 'invalid' && (
 				<p role="alert" className="text-[15px] text-[#6A1A1B]">
 					A few things need another look. They&rsquo;re marked above.
+				</p>
+			)}
+			{state.status === 'failed' && (
+				<p role="alert" className="text-[15px] text-[#6A1A1B]">
+					Your inquiry didn&rsquo;t send. Please try again, or email
+					me at{' '}
+					<a href={`mailto:${site.email}`} className="underline">
+						{site.email}
+					</a>
+					.
 				</p>
 			)}
 

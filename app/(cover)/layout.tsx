@@ -19,7 +19,7 @@ export default function CoverLayout({
 }) {
 	return (
 		<div
-			className={`${caslonDisplay.variable} ${caslonText.className} bg-[#F6F3EF] text-[#3A3738]`}
+			className={`${caslonDisplay.variable} ${caslonText.className} min-h-dvh bg-[#F6F3EF] text-[#3A3738]`}
 		>
 			{children}
 		</div>
