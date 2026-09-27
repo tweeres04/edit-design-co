@@ -1,0 +1,57 @@
+{
+ "title": "Lucien Marie Design | Warm Modern Interiors, Vancouver",
+ "bodyBg": "rgb(255, 255, 255)",
+ "body": {
+  "font": "aktiv-grotesk",
+  "size": "15.456px",
+  "weight": "300",
+  "color": "rgb(138, 100, 51)",
+  "tt": "none",
+  "ls": "1.23648px"
+ },
+ "h1": {
+  "font": "aktiv-grotesk",
+  "size": "18.912px",
+  "weight": "300",
+  "color": "rgb(240, 238, 224)",
+  "tt": "none",
+  "ls": "0.37824px"
+ },
+ "h2": {
+  "font": "aktiv-grotesk",
+  "size": "14.592px",
+  "weight": "300",
+  "color": "rgb(240, 238, 224)",
+  "tt": "none",
+  "ls": "0.29184px"
+ },
+ "nav": {
+  "font": "aktiv-grotesk",
+  "size": "13.728px",
+  "weight": "400",
+  "color": "rgb(149, 110, 55)",
+  "tt": "none",
+  "ls": "0.82368px"
+ },
+ "navLinks": [
+  "Skip to Content",
+  "Projects",
+  "About",
+  "Services",
+  "Process",
+  "Career",
+  "Inquire",
+  "Projects",
+  "About",
+  "Services",
+  "Process",
+  "Career",
+  "Inquire"
+ ],
+ "headings": [
+  "Warm modern interiors that blend natural elements, inviting tones, and rich textures",
+  "Michelle Poitras, BA Interior Design",
+  "Founder  I  Principal Designer"
+ ],
+ "height": 10185
+}

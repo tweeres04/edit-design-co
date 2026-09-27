@@ -1,0 +1,52 @@
+{
+ "title": "Pamela Billinghurst Interior Design",
+ "bodyBg": "rgb(242, 242, 242)",
+ "body": {
+  "font": "Inter",
+  "size": "13.728px",
+  "weight": "400",
+  "color": "rgb(51, 51, 51)",
+  "tt": "none",
+  "ls": "normal"
+ },
+ "h1": null,
+ "h2": {
+  "font": "Inter",
+  "size": "22.368px",
+  "weight": "400",
+  "color": "rgb(51, 51, 51)",
+  "tt": "none",
+  "ls": "-0.67104px"
+ },
+ "nav": {
+  "font": "Inter",
+  "size": "18.912px",
+  "weight": "400",
+  "color": "rgb(242, 242, 242)",
+  "tt": "none",
+  "ls": "normal"
+ },
+ "navLinks": [
+  "Skip to Content",
+  "Home",
+  "Works",
+  "A Lifetime",
+  "Process",
+  "Team",
+  "Press",
+  "Connect",
+  "Home",
+  "Works",
+  "A Lifetime",
+  "Process",
+  "Team",
+  "Press",
+  "Connect"
+ ],
+ "headings": [
+  "Yates Penthouse",
+  "Quadra",
+  "Coastal Retreat"
+ ],
+ "height": 2963
+}

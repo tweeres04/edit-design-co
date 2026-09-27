@@ -1,0 +1,51 @@
+{
+ "title": "Ayume Concepts | Interior Design Studio",
+ "bodyBg": "rgb(242, 241, 202)",
+ "body": {
+  "font": "siri",
+  "size": "20.6656px",
+  "weight": "500",
+  "color": "rgb(83, 78, 64)",
+  "tt": "none",
+  "ls": "1px"
+ },
+ "h1": null,
+ "h2": {
+  "font": "kepler-std-condensed-display",
+  "size": "102.4px",
+  "weight": "300",
+  "color": "rgb(242, 241, 202)",
+  "tt": "none",
+  "ls": "normal"
+ },
+ "nav": {
+  "font": "kepler-std-condensed-display",
+  "size": "21.184px",
+  "weight": "300",
+  "color": "rgb(83, 78, 64)",
+  "tt": "none",
+  "ls": "1.69472px"
+ },
+ "navLinks": [
+  "Skip to Content",
+  "ABOUT",
+  "PROJECTS",
+  "SERVICES",
+  "GET IN TOUCH",
+  "About",
+  "Projects",
+  "Services",
+  "GET IN TOUCH"
+ ],
+ "headings": [
+  "FUNCTIONAL SPACES, FORMED WITH EMOTION.",
+  "RECENT PROJECTS",
+  "SERVICES",
+  "why work with us?",
+  "ABOUT US",
+  "MEET JENNY",
+  "SCHEDULE YOUR CONSULTATION",
+  "info@ayumeconcepts.com"
+ ],
+ "height": 9445
+}

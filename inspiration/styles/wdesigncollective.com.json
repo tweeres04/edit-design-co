@@ -1,0 +1,52 @@
+{
+ "title": "W DESIGN COLLECTIVE",
+ "bodyBg": "rgb(255, 255, 250)",
+ "body": {
+  "font": "\"Roboto Flex\"",
+  "size": "30.8px",
+  "weight": "400",
+  "color": "rgb(0, 0, 0)",
+  "tt": "none",
+  "ls": "0.448px"
+ },
+ "h1": {
+  "font": "century-old-style-std",
+  "size": "52.8px",
+  "weight": "400",
+  "color": "rgb(0, 0, 0)",
+  "tt": "none",
+  "ls": "1.056px"
+ },
+ "h2": null,
+ "nav": {
+  "font": "Archivo",
+  "size": "14.272px",
+  "weight": "400",
+  "color": "rgb(168, 166, 161)",
+  "tt": "none",
+  "ls": "0.28544px"
+ },
+ "navLinks": [
+  "Skip to Content",
+  "W DESIGN COLLECTIVE",
+  "PROJECTS",
+  "SERVICES",
+  "W.D.C. VENUE",
+  "JOURNAL",
+  "SHOP W.D.C. HOME",
+  "W DESIGN COLLECTIVE",
+  "PROJECTS",
+  "SERVICES",
+  "W.D.C. Venue",
+  "JOURNAL",
+  "SHOP W.D.C. HOME"
+ ],
+ "headings": [
+  "Our Projects",
+  "W.D.C. Journal",
+  "Design Services",
+  "Shop Our Collection",
+  "SHOP W.D.C. HOMESHOP W.D.C. HOMESHOP W.D.C. HOMESHOP W.D.C. HOME\nSHOP W.D.C. HOME"
+ ],
+ "height": 4013
+}

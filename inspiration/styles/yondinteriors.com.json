@@ -1,0 +1,68 @@
+{
+ "title": "Yond Interiors | Interior Design Services",
+ "bodyBg": "rgb(215, 208, 178)",
+ "body": {
+  "font": "Inter",
+  "size": "13.3333px",
+  "weight": "400",
+  "color": "rgb(85, 69, 37)",
+  "tt": "none",
+  "ls": "0.266667px"
+ },
+ "h1": {
+  "font": "GramercyRegular",
+  "size": "22px",
+  "weight": "300",
+  "color": "rgb(112, 97, 16)",
+  "tt": "none",
+  "ls": "-0.44px"
+ },
+ "h2": {
+  "font": "GramercyItalic",
+  "size": "16px",
+  "weight": "300",
+  "color": "rgb(85, 69, 37)",
+  "tt": "none",
+  "ls": "-0.32px"
+ },
+ "nav": {
+  "font": "\"HK Grotesk\"",
+  "size": "20px",
+  "weight": "400",
+  "color": "rgb(92, 127, 157)",
+  "tt": "none",
+  "ls": "4px"
+ },
+ "navLinks": [
+  "The Studio Table",
+  "&    Brunel",
+  "+ MENU",
+  "Studio",
+  "Portfolio",
+  "About",
+  "Services",
+  "Inquire",
+  "& More",
+  "Brunel",
+  "The Studio Table",
+  "Yond Cottage",
+  "The Expert",
+  "Shop",
+  "Instagram",
+  "Pinterest",
+  "THE STUDIO TABLE",
+  "& BRUNEL",
+  "Home Slideshow",
+  "Home Intro"
+ ],
+ "headings": [
+  "Interior Design Services Rooted in Authenticity",
+  "Shop Our Favorites",
+  "Featured Project:",
+  "LOREN COTTAGE",
+  "Shop Our Designer Favorites",
+  "Follow Along with Yond Interiors",
+  "Sign Up For Our Newsletter"
+ ],
+ "height": 3860
+}

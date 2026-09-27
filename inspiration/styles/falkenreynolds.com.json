@@ -1,0 +1,54 @@
+{
+ "title": "Falken Reynolds Interiors - Vancouver-Based Interior Design",
+ "bodyBg": "rgba(0, 0, 0, 0)",
+ "body": {
+  "font": "Flama-Book, sans-serif",
+  "size": "17px",
+  "weight": "400",
+  "color": "rgb(0, 0, 0)",
+  "tt": "none",
+  "ls": "normal"
+ },
+ "h1": {
+  "font": "Flama-Book, sans-serif",
+  "size": "34px",
+  "weight": "100",
+  "color": "rgb(0, 0, 0)",
+  "tt": "none",
+  "ls": "normal"
+ },
+ "h2": {
+  "font": "Flama-Book, sans-serif",
+  "size": "48px",
+  "weight": "100",
+  "color": "rgb(0, 0, 0)",
+  "tt": "none",
+  "ls": "normal"
+ },
+ "nav": {
+  "font": "Flama-Book, sans-serif",
+  "size": "17px",
+  "weight": "400",
+  "color": "rgb(0, 0, 0)",
+  "tt": "none",
+  "ls": "normal"
+ },
+ "navLinks": [
+  "Projects",
+  "Private Homes",
+  "Products & Installations",
+  "Retail & Hospitality",
+  "About Us",
+  "Press & Awards",
+  "Contact"
+ ],
+ "headings": [
+  "Falken Reynolds",
+  "We create authentic and contemporary spaces shaped by the distinct lives and experiences of our clients.",
+  "Cadboro Bay Beach House",
+  "Acropolis House",
+  "Seawall House",
+  "Our curiosity comes from our own idiosyncratic paths to design."
+ ],
+ "height": 6049
+}

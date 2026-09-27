@@ -1,0 +1,21 @@
+/* Palette sampled from Melissa's own projects */
+.bold-root {
+	--walnut: #4a3226; /* Beaverbrooke kitchen cabinets */
+	--oak: #ae9d8f; /* Hampshire stained oak island and pantry */
+	--tile: #3e5a4c; /* Hampshire hand-glazed shower tile */
+	--oxblood: #6a1a1b; /* Edit Design Co wordmark */
+	--plaster: #ece8e2; /* The white walls in raking light */
+	--ink: #2b2627;
+
+	background: var(--plaster);
+	color: var(--ink);
+	font-family: var(--font-bold-sans), sans-serif;
+}
+
+.bold-display {
+	font-family: var(--font-bold-display), serif;
+	font-stretch: 62.5%;
+	font-weight: 300;
+	line-height: 0.86;
+	letter-spacing: -0.01em;
+}
