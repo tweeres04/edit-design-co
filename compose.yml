@@ -3,6 +3,8 @@ services:
     build: .
     container_name: edit-design-co
     restart: unless-stopped
+    # GOOGLE_PLACES_API_KEY for the inquiry form's address lookup
+    env_file: .env
 
 networks:
   default:

@@ -1,0 +1,29 @@
+/*
+ * Hero slideshow: 5 slides, 7s each, 35s loop. Each slide fades in on top
+ * (z-index 2) over 2.5s, drops beneath the next slide, then stays opaque
+ * until that slide has fully faded in over it, so the crossfade never dims
+ * to the background.
+ */
+@keyframes cover-slideshow {
+	0% {
+		opacity: 0;
+		z-index: 2;
+	}
+	7.14% {
+		opacity: 1;
+		z-index: 2;
+	}
+	7.15% {
+		z-index: 1;
+	}
+	27.14% {
+		opacity: 1;
+		z-index: 1;
+	}
+	27.15% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}

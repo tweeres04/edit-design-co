@@ -5,6 +5,12 @@ import { Wordmark } from '@/components/wordmark'
 // Melissa picks one.
 const approaches = [
 	{
+		href: '/cover',
+		name: 'Cover',
+		description:
+			'For phones. A full-screen photo and a full-screen menu. Below the fold is still to come.',
+	},
+	{
 		href: '/gallery',
 		name: 'Gallery',
 		description:
@@ -40,7 +46,7 @@ export default function Home() {
 	return (
 		<main className="mx-auto max-w-2xl px-6 py-20 text-[#3A3738]">
 			<Wordmark className="w-40 text-[#6A1A1B]" />
-			<h1 className="mt-12 text-2xl">Five directions for the new site</h1>
+			<h1 className="mt-12 text-2xl">Directions for the new site</h1>
 			<p className="mt-3 text-[#3A3738]/80">
 				Each one uses the same photos and details. Click through the
 				homepage and a project page for each.
