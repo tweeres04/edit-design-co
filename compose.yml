@@ -1,0 +1,10 @@
+services:
+  edit-design-co:
+    build: .
+    container_name: edit-design-co
+    restart: unless-stopped
+
+networks:
+  default:
+    external: true
+    name: proxy
