@@ -1,6 +1,7 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useEffect } from 'react'
+import { sendGAEvent } from '@next/third-parties/google'
 import { sendInquiry, type InquiryState } from './actions'
 import { AddressInput } from './address-input'
 import { site } from '@/lib/site'
@@ -17,6 +18,10 @@ export function InquiryForm() {
 		sendInquiry,
 		{ status: 'idle' },
 	)
+
+	useEffect(() => {
+		if (state.status === 'sent') sendGAEvent('event', 'generate_lead')
+	}, [state.status])
 
 	if (state.status === 'sent') {
 		return (
