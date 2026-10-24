@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Wordmark } from '@/components/wordmark'
-import { projects } from '@/lib/projects'
 import { site } from '@/lib/site'
+import { slides } from '@/lib/slides'
 import { Menu } from './_components/menu'
 import './cover.css'
 
@@ -9,18 +9,6 @@ import './cover.css'
 // percentages in cover.css; change them together
 const SLIDE_SECONDS = 7
 const FADE_SECONDS = 2.5
-
-const slideKeys = [
-	'beaverbrooke-04',
-	'hampshire-kitchen-pantry-031',
-	'beaverbrooke-06',
-	'hampshire-master-bath-101',
-	'beaverbrooke-13',
-]
-const allPhotos = projects.flatMap((project) => project.photos)
-const slides = slideKeys.map((key) =>
-	allPhotos.find((photo) => photo.key === key)!,
-)
 
 // Tells search engines who the business is. She works from home, so it
 // lists her town and service area instead of a street address.

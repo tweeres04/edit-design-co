@@ -1,13 +1,16 @@
 import { notFound } from 'next/navigation'
-import { projects } from '@/lib/projects'
+import { slides } from '@/lib/slides'
 
 // Dev-only contact sheet of every photo in the MinIO bucket, to help pick
 // photos for the site
 const BUCKET = 'https://files.tweeres.com/edit-design'
 
-const usedKeys = new Set(
-	projects.flatMap((project) => project.photos.map((photo) => photo.key)),
-)
+// Where each photo is used on the site. The share image is
+// app/opengraph-image.jpg, cropped by hand from this photo.
+const usage = new Map<string, string>([
+	...slides.map((slide, index) => [slide.key, `Slide ${index + 1}`] as const),
+	['beaverbrooke-12', 'Share image'],
+])
 
 async function listPhotoKeysByGroup() {
 	// The bucket is publicly listable and holds well under the 1,000 keys
@@ -33,9 +36,6 @@ export default async function GalleryPage() {
 			<h1 className="font-(family-name:--font-caslon-display) text-[44px] leading-none text-[#6A1A1B]">
 				All photos
 			</h1>
-			<p className="mt-3 text-[15px]">
-				Outlined photos are already on the site.
-			</p>
 			{[...groups].map(([group, keys]) => (
 				<section key={group} className="mt-12">
 					<h2 className="text-lg">
@@ -49,16 +49,21 @@ export default async function GalleryPage() {
 									target="_blank"
 								>
 									{/* Plain img: the photo loader needs an orientation we don't
-									    know for unused photos */}
+									    know for photos not on the site */}
 									{/* eslint-disable-next-line @next/next/no-img-element */}
 									<img
 										src={`${BUCKET}/${key}-800.webp`}
 										alt=""
 										loading="lazy"
-										className={`aspect-square w-full bg-[#E9E4DE] object-contain ${usedKeys.has(key) ? 'outline-2 outline-offset-2 outline-[#6A1A1B]' : ''}`}
+										className="aspect-square w-full bg-[#E9E4DE] object-contain"
 									/>
 								</a>
 								<p className="mt-1 text-xs select-all">{key}</p>
+								{usage.has(key) && (
+									<p className="text-xs text-[#6A1A1B]">
+										{usage.get(key)}
+									</p>
+								)}
 							</li>
 						))}
 					</ul>
