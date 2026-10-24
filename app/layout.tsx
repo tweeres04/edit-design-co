@@ -31,8 +31,6 @@ export const metadata: Metadata = {
 		description: site.description,
 	},
 	twitter: { card: 'summary_large_image' },
-	// Concept round only; remove once a direction goes live
-	robots: { index: false, follow: false },
 }
 
 // Mobile-first. Desktop gets the same layout for now.

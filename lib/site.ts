@@ -1,7 +1,6 @@
 export const site = {
 	name: 'Edit Design Co',
-	// Switch to https://editdesignco.ca at launch
-	url: 'https://edit-design-co.tweeres.com',
+	url: 'https://editdesignco.ca',
 	description:
 		'Full-service interior design for renovations and new builds in Greater Victoria, with drawings and spec packages your builder can work from.',
 	founder: 'Melissa Orton',
