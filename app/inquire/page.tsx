@@ -14,7 +14,7 @@ export default function InquirePage() {
 	return (
 		<>
 			<header className="flex items-start justify-between px-6 pt-7 text-[#6A1A1B]">
-				<Link href="/cover">
+				<Link href="/">
 					<Wordmark className="w-32" />
 				</Link>
 				<Menu />

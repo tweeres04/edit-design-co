@@ -11,16 +11,8 @@ export type Photo = {
 export type Project = {
 	slug: string
 	name: string
-	// Placeholder until we get the real details from Melissa
-	kind: string
-	location: string
-	summary: string
-	cover: Photo
 	// Curated, near-duplicates removed, in a sensible viewing order
 	photos: Photo[]
-	// Hand-picked portrait pairs (a room shot and a detail from the same space)
-	// to fill wide layouts as diptychs
-	pairs: [Photo, Photo][]
 }
 
 const LANDSCAPE = new Set([
@@ -221,51 +213,15 @@ const hampshirePhotos = [
 	),
 ]
 
-function pairsFrom(photos: Photo[], keys: [string, string][]) {
-	const byKey = new Map(photos.map((p) => [p.key, p]))
-	return keys.map(
-		([a, b]) => [byKey.get(a)!, byKey.get(b)!] as [Photo, Photo],
-	)
-}
-
 export const projects: Project[] = [
 	{
 		slug: 'beaverbrooke',
 		name: 'Beaverbrooke',
-		kind: 'New build',
-		location: 'Greater Victoria',
-		summary:
-			'A new build with warm walnut cabinetry, a vaulted great room and a stone fireplace at its centre.',
-		cover: beaverbrookePhotos[0],
 		photos: beaverbrookePhotos,
-		pairs: pairsFrom(beaverbrookePhotos, [
-			['beaverbrooke-03', 'beaverbrooke-02'],
-			['beaverbrooke-07', 'beaverbrooke-06'],
-			['beaverbrooke-13', 'beaverbrooke-14'],
-			['beaverbrooke-16', 'beaverbrooke-17'],
-			['beaverbrooke-22', 'beaverbrooke-01'],
-		]),
 	},
 	{
 		slug: 'hampshire',
 		name: 'Hampshire',
-		kind: 'Whole-home renovation',
-		location: 'Greater Victoria',
-		summary:
-			'A bright, whole-home renovation with stained oak cabinetry, hand-glazed tile and a hardworking pantry.',
-		cover: hampshirePhotos[0],
 		photos: hampshirePhotos,
-		pairs: pairsFrom(hampshirePhotos, [
-			['hampshire-front-entrance-011', 'hampshire-front-entrance-016'],
-			['hampshire-kitchen-pantry-031', 'hampshire-kitchen-pantry-061'],
-			['hampshire-kitchen-pantry-064', 'hampshire-kitchen-pantry-073'],
-			['hampshire-living-room-083', 'hampshire-living-room-078'],
-			['hampshire-master-bath-101', 'hampshire-master-bath-100'],
-			['hampshire-laundry-room-005', 'hampshire-laundry-room-009'],
-		]),
 	},
 ]
-
-export function getProject(slug: string) {
-	return projects.find((project) => project.slug === slug)
-}
