@@ -16,7 +16,6 @@ export type AddressParts = {
 	unit: string
 	city: string
 	province: string
-	postalCode: string
 }
 
 function headers(fieldMask?: string) {
@@ -105,6 +104,5 @@ export async function getAddress(
 		unit: part('subpremise'),
 		city: part('locality') || part('sublocality'),
 		province: part('administrative_area_level_1', 'shortText'),
-		postalCode: part('postal_code'),
 	}
 }

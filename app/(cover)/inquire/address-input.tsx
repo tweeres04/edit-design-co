@@ -8,7 +8,7 @@ import {
 } from './address-actions'
 
 // Fields filled in from the chosen address, by input name
-const FILLED_FIELDS = ['unit', 'city', 'province', 'postalCode'] as const
+const FILLED_FIELDS = ['unit', 'city', 'province'] as const
 
 // Street address type-ahead. Picking a suggestion fills in the rest of the
 // address fields in the same form. Typing an address by hand still works.

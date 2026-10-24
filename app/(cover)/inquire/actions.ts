@@ -20,11 +20,10 @@ const REQUIRED: Record<string, string> = {
 	lastName: 'Please add your last name',
 	email: 'Please add your email',
 	phone: 'Please add your phone number',
-	project: 'Please tell me a little about your project',
+	project: 'Please tell us a little about your project',
 	street: 'Please add the street address',
 	city: 'Please add the city',
 	province: 'Please add the province',
-	postalCode: 'Please add the postal code',
 }
 
 const TEXT_FIELDS = [
@@ -85,7 +84,7 @@ async function emailInquiry({ text, heardFrom }: InquiryValues) {
 	const name = `${text.firstName} ${text.lastName}`
 	const address = [
 		[text.street, text.unit].filter(Boolean).join(', '),
-		`${text.city}, ${text.province} ${text.postalCode}`,
+		`${text.city}, ${text.province}`,
 	].join('\n')
 
 	const body = [
@@ -98,7 +97,7 @@ async function emailInquiry({ text, heardFrom }: InquiryValues) {
 		'Project:',
 		text.project,
 		'',
-		'Project address:',
+		'Site address:',
 		address,
 		...(text.feel
 			? ['', 'How they want their home to feel:', text.feel]

@@ -30,7 +30,7 @@ export function InquiryForm() {
 					Thanks{state.firstName ? `, ${state.firstName}` : ''}
 				</p>
 				<p className="mt-4 text-[15px] leading-relaxed">
-					I&rsquo;ve got your note and I&rsquo;ll be in touch soon to
+					We&rsquo;ve got your note and we&rsquo;ll be in touch soon to
 					talk about your project.
 				</p>
 			</div>
@@ -90,45 +90,9 @@ export function InquiryForm() {
 				autoComplete: 'tel-national',
 			})}
 
-			<fieldset
-				aria-invalid={errors.heardFrom ? true : undefined}
-				aria-describedby={
-					errors.heardFrom ? 'heardFrom-error' : undefined
-				}
-			>
-				<legend className={labelClass}>
-					How did you hear about me?
-				</legend>
-				<div className="mt-3 space-y-3">
-					{HEARD_FROM.map((option) => (
-						<label
-							key={option}
-							className="flex items-center gap-3 text-base"
-						>
-							<input
-								type="checkbox"
-								name="heardFrom"
-								value={option}
-								defaultChecked={values?.heardFrom.includes(
-									option,
-								)}
-								className="size-5 accent-[#6A1A1B]"
-							/>
-							{option}
-						</label>
-					))}
-				</div>
-				<FieldError id="heardFrom-error" message={errors.heardFrom} />
-			</fieldset>
-
-			{field(
-				'referrer',
-				<>If someone referred you, who can I thank?{optional}</>,
-			)}
-
 			<div>
 				<label htmlFor="project" className={labelClass}>
-					Tell me a bit about your project
+					Let&rsquo;s talk scope. Tell us about your project
 				</label>
 				<textarea
 					id="project"
@@ -147,7 +111,7 @@ export function InquiryForm() {
 
 			<fieldset className="space-y-6">
 				<legend className="font-(family-name:--font-caslon-display) text-[28px] leading-none text-[#6A1A1B]">
-					Project address
+					Site address
 				</legend>
 				<div>
 					<label htmlFor="street" className={labelClass}>
@@ -173,20 +137,50 @@ export function InquiryForm() {
 					required: true,
 					autoComplete: 'address-level2',
 				})}
-				<div className="grid grid-cols-2 gap-5">
-					{field('province', 'Province', {
-						required: true,
-						autoComplete: 'address-level1',
-						defaultValue: values?.text.province ?? 'BC',
-					})}
-					{field('postalCode', 'Postal code', {
-						required: true,
-						autoComplete: 'postal-code',
-					})}
-				</div>
+				{field('province', 'Province', {
+					required: true,
+					autoComplete: 'address-level1',
+					defaultValue: values?.text.province ?? 'BC',
+				})}
 			</fieldset>
 
 			{field('feel', <>How do you want your home to feel?{optional}</>)}
+
+			<fieldset
+				aria-invalid={errors.heardFrom ? true : undefined}
+				aria-describedby={
+					errors.heardFrom ? 'heardFrom-error' : undefined
+				}
+			>
+				<legend className={labelClass}>
+					How did you hear about Edit Design?
+				</legend>
+				<div className="mt-3 space-y-3">
+					{HEARD_FROM.map((option) => (
+						<label
+							key={option}
+							className="flex items-center gap-3 text-base"
+						>
+							<input
+								type="checkbox"
+								name="heardFrom"
+								value={option}
+								defaultChecked={values?.heardFrom.includes(
+									option,
+								)}
+								className="size-5 accent-[#6A1A1B]"
+							/>
+							{option}
+						</label>
+					))}
+				</div>
+				<FieldError id="heardFrom-error" message={errors.heardFrom} />
+			</fieldset>
+
+			{field(
+				'referrer',
+				<>If someone referred you, who can we thank?{optional}</>,
+			)}
 
 			{/* Hidden from people; bots fill it in and get ignored */}
 			<div aria-hidden="true" className="absolute -left-[9999px]">
@@ -208,7 +202,7 @@ export function InquiryForm() {
 			{state.status === 'failed' && (
 				<p role="alert" className="text-[15px] text-[#6A1A1B]">
 					Your inquiry didn&rsquo;t send. Please try again, or email
-					me at{' '}
+					us at{' '}
 					<a href={`mailto:${site.email}`} className="underline">
 						{site.email}
 					</a>
