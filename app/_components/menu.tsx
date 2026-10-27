@@ -41,18 +41,20 @@ export function Menu() {
 					<span className="absolute h-px w-7 -rotate-45 bg-current" />
 				</button>
 
-				<h2 className="font-(family-name:--font-caslon-display) text-[44px] leading-none">
-					Studio
-				</h2>
-				<ul className="mt-7 space-y-4">
-					{studioLinks.map((link) => (
-						<li key={link.href}>
-							<a href={link.href} className={linkClass}>
-								{link.label}
-							</a>
-						</li>
-					))}
-				</ul>
+				<div className="mx-auto w-full max-w-xl">
+					<h2 className="font-(family-name:--font-caslon-display) text-[44px] leading-none">
+						Studio
+					</h2>
+					<ul className="mt-7 space-y-4">
+						{studioLinks.map((link) => (
+							<li key={link.href}>
+								<a href={link.href} className={linkClass}>
+									{link.label}
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
 			</nav>
 		</>
 	)
