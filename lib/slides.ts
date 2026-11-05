@@ -1,6 +1,18 @@
-// Homepage slideshow photos, in order. All portrait, which the photo loader
-// needs to know from the src path.
-export const slides = [
+// Homepage slideshow photos, in order. They all use the loader's portrait path,
+// even landscape ones like beaverbrooke-05: slides fill the screen's height, so
+// a landscape photo on a phone needs the larger file that path picks.
+// objectPosition sets which part of the photo
+// stays in frame on wide screens, where portrait photos lose their top and
+// bottom; it defaults to the centre. landscapeKey swaps in a landscape photo on
+// landscape screens, so alt has to describe both.
+type Slide = {
+	key: string
+	alt: string
+	objectPosition?: string
+	landscapeKey?: string
+}
+
+const photos: Slide[] = [
 	{
 		key: 'beaverbrooke-04',
 		alt: 'Vaulted living room with a stone fireplace and timber beams',
@@ -18,7 +30,23 @@ export const slides = [
 		alt: 'Freestanding tub beside a window with a woven stool',
 	},
 	{
-		key: 'beaverbrooke-13',
-		alt: 'Primary bedroom with a beamed ceiling and linen bedding',
+		key: 'moss-street-50',
+		alt: 'Kitchen range under a white hood, with brass sconces and a dark stone backsplash',
+		objectPosition: '50% 38%',
 	},
-].map((slide) => ({ ...slide, src: `/portrait/${slide.key}` }))
+	{
+		key: 'beaverbrooke-05',
+		alt: 'Living room with dark wood built-in shelves behind a grey sofa',
+	},
+	{
+		key: 'moss-street-46',
+		landscapeKey: 'moss-street-58',
+		alt: 'Dining table with a bowl of fruit in front of built-in shelves and a coffee station',
+	},
+]
+
+export const slides = photos.map((slide) => ({
+	...slide,
+	src: `/portrait/${slide.key}`,
+	landscapeSrc: slide.landscapeKey && `/landscape/${slide.landscapeKey}`,
+}))
