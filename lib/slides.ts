@@ -22,16 +22,6 @@ const photos: Slide[] = [
 		alt: 'Walnut kitchen cabinets around a white tile range wall',
 	},
 	{
-		key: 'moss-street-50',
-		alt: 'Kitchen range under a white hood, with brass sconces and a dark stone backsplash',
-		objectPosition: '50% 38%',
-	},
-	{
-		key: 'moss-street-46',
-		landscapeKey: 'moss-street-58',
-		alt: 'Dining table with a bowl of fruit in front of built-in shelves and a coffee station',
-	},
-	{
 		key: 'hampshire-kitchen-pantry-031',
 		alt: 'Kitchen island under two white pendants',
 	},
@@ -42,6 +32,16 @@ const photos: Slide[] = [
 	{
 		key: 'hampshire-master-bath-101',
 		alt: 'Freestanding tub beside a window with a woven stool',
+	},
+	{
+		key: 'moss-street-50',
+		alt: 'Kitchen range under a white hood, with brass sconces and a dark stone backsplash',
+		objectPosition: '50% 38%',
+	},
+	{
+		key: 'moss-street-46',
+		landscapeKey: 'moss-street-58',
+		alt: 'Dining table with a bowl of fruit in front of built-in shelves and a coffee station',
 	},
 ]
 
