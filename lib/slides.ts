@@ -18,16 +18,8 @@ const photos: Slide[] = [
 		alt: 'Vaulted living room with a stone fireplace and timber beams',
 	},
 	{
-		key: 'hampshire-kitchen-pantry-031',
-		alt: 'Kitchen island under two white pendants',
-	},
-	{
 		key: 'beaverbrooke-06',
 		alt: 'Walnut kitchen cabinets around a white tile range wall',
-	},
-	{
-		key: 'hampshire-master-bath-101',
-		alt: 'Freestanding tub beside a window with a woven stool',
 	},
 	{
 		key: 'moss-street-50',
@@ -35,13 +27,21 @@ const photos: Slide[] = [
 		objectPosition: '50% 38%',
 	},
 	{
+		key: 'moss-street-46',
+		landscapeKey: 'moss-street-58',
+		alt: 'Dining table with a bowl of fruit in front of built-in shelves and a coffee station',
+	},
+	{
+		key: 'hampshire-kitchen-pantry-031',
+		alt: 'Kitchen island under two white pendants',
+	},
+	{
 		key: 'beaverbrooke-05',
 		alt: 'Living room with dark wood built-in shelves behind a grey sofa',
 	},
 	{
-		key: 'moss-street-46',
-		landscapeKey: 'moss-street-58',
-		alt: 'Dining table with a bowl of fruit in front of built-in shelves and a coffee station',
+		key: 'hampshire-master-bath-101',
+		alt: 'Freestanding tub beside a window with a woven stool',
 	},
 ]
 
