@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { slides } from '@/lib/slides'
+import { PhotoGrid } from './_components/photo-grid'
 
 // Dev-only contact sheet of every photo in the MinIO bucket, to help pick
 // photos for the site
@@ -41,32 +42,13 @@ export default async function GalleryPage() {
 					<h2 className="text-lg">
 						{group} ({keys.length})
 					</h2>
-					<ul className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-4">
-						{keys.map((key) => (
-							<li key={key}>
-								<a
-									href={`${BUCKET}/${key}-2400.webp`}
-									target="_blank"
-								>
-									{/* Plain img: the photo loader needs an orientation we don't
-									    know for photos not on the site */}
-									{/* eslint-disable-next-line @next/next/no-img-element */}
-									<img
-										src={`${BUCKET}/${key}-800.webp`}
-										alt=""
-										loading="lazy"
-										className="aspect-square w-full bg-[#E9E4DE] object-contain"
-									/>
-								</a>
-								<p className="mt-1 text-xs select-all">{key}</p>
-								{usage.has(key) && (
-									<p className="text-xs text-[#6A1A1B]">
-										{usage.get(key)}
-									</p>
-								)}
-							</li>
-						))}
-					</ul>
+					<PhotoGrid
+						bucket={BUCKET}
+						photos={keys.map((key) => ({
+							key,
+							usage: usage.get(key),
+						}))}
+					/>
 				</section>
 			))}
 		</main>
